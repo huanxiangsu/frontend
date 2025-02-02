@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+}
+
+#app-title {
+    text-align: center;
+    font-size: 175%;
+}
+
+#mobile-title {
+    display: none;
+}
+
+.row {
+    width: 100%;
+}
+
+.menu-section {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    position: relative;
+    background-color: rgb(219, 242, 248);
+    border: 1px solid #000;
+}
+
+.menu-title-section {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    /* display: flex;
+    flex-direction: row-reverse; */
+}
+
+.menu-title {
+    width: 100%;
+    padding: 3px 6px;
+    font-size: 125%;
+    text-align: center;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.menu-title-mobile {
+    display: none;
+}
+
+#chicken-section .menu-title {
+    background-color: orange;
+}
+
+#beef-section .menu-title {
+    background-color: rgb(224, 51, 20);
+    color: #fff;
+}
+
+#sushi-section .menu-title {
+    background-color: rgb(121, 230, 116);
+}
+
+.menu-description {
+    height: 100px;
+    padding: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.menu-description:hover {
+    cursor: n-resize;
+    overflow: auto;
+}
+
+/* Desktop View: >= 992px */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+/* Tablet View: 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        float: left;
+        width: 50%;
+    }
+
+    .col-md-12 {
+        float: left;
+        width: 100%;
+    }
+
+    #sushi-section>.menu-section {
+        width: 98%;
+    }
+
+    #sushi-section .menu-title-section {
+        width: 20%;
+    }
+}
+
+/* Mobile View: <= 767px */
+@media (max-width: 767px) {
+    #app-title {
+        font-family: monospace;
+        font-size: 140%;
+        text-align: left;
+    }
+
+    /* in mobile view, hide the desktop menu title */
+    #desktop-title {
+        display: none;
+    }
+
+    /* in mobile view, show the mobile categories title */
+    #mobile-title {
+        display: block;
+    }
+
+    .menu-section {
+        width: 100%;
+    }
+
+    .menu-title-section {
+        width: 100%;
+    }
+
+    .menu-title {
+        border-left: 0;
+    }
+
+    .menu-title-desktop {
+        display: none;
+    }
+
+    /* in mobile view, show the menu title with 10 words description, cut and hide the text with ellipsis if overflow */
+    .menu-title-mobile {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .menu-description {
+        /* margin-top: 52px; */
+    }
+}
