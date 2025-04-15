@@ -1,0 +1,10 @@
+<ul class="myList">
+    <li ng-repeat="item in $ctrl.items" class="text-warning">
+        <div>
+            <span>({{ item.short_name }}) - {{ item.name }}</span>
+            <span>{{ item.price_small ? '(small: $' + item.price_small + ')' : '' }}</span>
+            <span>{{ item.price_large ? '(large: $' + item.price_large + ')' : '' }}</span>
+        </div>
+        <div>{{ item.description }}</div>
+    </li>
+</ul>
